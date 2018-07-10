@@ -12,12 +12,9 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-    if board[index][0..8]
-      binding.pry
+    if index.between?[0, 8] && position_taken?(board, index) == false || position_taken?(board, index) == true
         return true
     else
-      index[(0..8)] = false || board[index] == false
-
         return false
     end
 end
