@@ -12,6 +12,7 @@ end
 
 def valid_move?(board, index)
     if board[index][0..8]
+      binding.pry
         return true
     else
       index[(0..8)] = false || board[index] == false
