@@ -19,8 +19,3 @@ def valid_move?(board, index)
     end
 end
 
-    else
-        board[index] === (0..8)
-        return false
-    end
-end
