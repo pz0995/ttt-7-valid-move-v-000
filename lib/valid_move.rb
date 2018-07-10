@@ -1,3 +1,4 @@
+
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 def position_taken?(board, index)
@@ -8,10 +9,13 @@ def position_taken?(board, index)
      return false
    end
 end
+
 def valid_move?(board, index)
-    if board[index].between?[0, 8] && position_taken? == false || position_taken? == true
+    if board[index][0..8]
         return true
     else
+      index[(0..8)] = false || board[index] == false
+
         return false
     end
 end
